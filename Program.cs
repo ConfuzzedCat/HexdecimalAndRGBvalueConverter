@@ -42,9 +42,9 @@ namespace HexCodeAndRGBvalueConverter
                     _b = int.Parse(hexCode.Substring(11, 2), NumberStyles.AllowHexSpecifier);
                     return r + ", " + g + ", " + b + " | " + _r + ", " + _g + ", " + _b;
                 }
-                catch (System.Exception e)
+                catch (Exception e)
                 {
-                    if (e is System.ArgumentOutOfRangeException)
+                    if (e is ArgumentOutOfRangeException)
                     {
                         return "The second hex code is Invalid or formatted incorrectly.";
                     }
@@ -88,7 +88,7 @@ namespace HexCodeAndRGBvalueConverter
                 outputString = _r.ToString("X2") + _g.ToString("X2") + _b.ToString("X2");
                 return outputString;
             }
-            catch (System.FormatException)
+            catch (FormatException)
             {
                 return "Input contains invalid characters!";
             }
